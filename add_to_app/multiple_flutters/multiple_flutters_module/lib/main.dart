@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart' as launcher;
 
-void main() => runApp(const MyApp(color: Colors.blue));
+void main() => runApp(const MyApp(color: Colors.red));
 
 @pragma('vm:entry-point')
 void topMain() => runApp(const MyApp(color: Colors.green));
@@ -75,8 +75,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'You have pushed the button this many times:',
+              'You have pushed the button this many times:\n\n',
             ),
+            const SizedBox(width :100,height: 100,child: const TextField(autofocus: true,)),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
